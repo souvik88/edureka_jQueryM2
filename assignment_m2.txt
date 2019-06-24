@@ -1,0 +1,6 @@
+Assignment
+1.Create a webpage with the following fields as the form fields, » First Name » Last Name 
+2.Add more fields with jQuery & remove last name field.» Address » Email ID » Date of Birth
+3.Modify the attributes  for date of birth field to type=”date” & Email ID to type=”email”
+4.Write HTML & jQuery script to create  a sliding panel, using jQuery Sliding methods
+5.Create ananimated tooltips with jQuery on hovering buttons.  
