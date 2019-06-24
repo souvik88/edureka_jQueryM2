@@ -4,3 +4,5 @@ Assignment
 3.Modify the attributes  for date of birth field to type=”date” & Email ID to type=”email”
 4.Write HTML & jQuery script to create  a sliding panel, using jQuery Sliding methods
 5.Create ananimated tooltips with jQuery on hovering buttons.  
+
+
