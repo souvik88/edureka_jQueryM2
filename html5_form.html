@@ -1,0 +1,80 @@
+<!--
+Assignment
+1.Create a webpage with the following fields as the form fields, » First Name » Last Name
+2.Add more fields with jQuery & remove last name field.» Address » Email ID » Date of Birth
+3.Modify the attributes  for date of birth field to type=”date” & Email ID to type=”email”
+4.Write HTML & jQuery script to create  a sliding panel, using jQuery Sliding methods
+5.Create an animated tooltips with jQuery on hovering buttons.  
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <h1>Registration</h1>
+    <form id="form-0">
+        <label for="firstname">First name:</label>
+        <input id="firstname" name="firstname" type="text" placeholder="your first name">
+        <label for="lastname">Last name:</label>
+        <input id="lastname" name="lastname" type="text" placeholder="your last name">
+        <!--jQuery Removed the last name field-->
+    </form>
+    <div>
+        <label id="addressBox">Address:</label>
+        <label id="emailid">Email ID:</label>
+        <label id="dateOfBirth">Date Of Birth</label>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("<input type='text' >").attr("id", "address").attr("name", "address").attr("placeholder", "type your address").insertAfter("#addressBox");
+            $("<input type='email' >").attr("id", "email").attr("name", "email").attr("placeholder", "type your address").insertAfter("#emailid");
+            $("<input type='date' >").attr("id", "birthday").attr("name", "birthday").attr("value", "birthday").insertAfter("#dateOfBirth");
+            $("#lastname").remove();
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideDown("slow");
+            });
+        });
+    </script>
+    <style>
+        #panel,
+        #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: dotted 2px #c3c3c3;
+        }
+
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel">Hello world!</div>
+
+    <script>
+        $(function () {
+            $("#tooltip-2").tooltip();
+        });
+    </script>
+
+
+    <button><a id="tooltip-2" href="#" title="Tooltip example">
+            Tooltip button, hover here</a></button>
+</body>
+
+</html>
